@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>バカチン★クイズ</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Googleフォント読込 -->
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+    <!-- スプラッシュスクリーン -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="./bakachin-material/image/バカチンガー広報イラスト (2).png" alt="クイズゲームロゴ" class="splash-logo">
+            <h1 class="splash-title">バカチン<span>★</span>クイズ</h1>
+            <p>～ バカチンガー初級編 ～</p>
+        </div>
+    </div>
+
+    <!-- クイズコンテナ -->
+    <div class="quiz-container" style="display: none;">
+        <h1>バカチン<span>★</span>クイズ</h1>
+        <div id="question">質問がここに表示されます。</div>
+        <ul id="choices"></ul>
+        <div id="score">［配点 <span id="currentScore">20</span>点］</div>
+        <div id="timer">制限時間 <span id="time">10</span> 秒</div>
+    </div>
+
+    <!-- 成績表示ページ -->
+    <div id="final-screen" style="display: none;">
+        <h1>結果<span>★</span>発表</h1>
+        <div id="final-score">スコア　<span id="finalScoreDisplay">0</span>/100点</div>
+        <img src="./bakachin-material/image/バカチンガー広報イラスト (2).png" alt="最終画像" id="final-image">
+        <p id="final-message">お疲れチンガ～</p>
+        <button id="restart-quiz">再挑戦</button>
+    </div>
+
+    <!-- 効果音 -->
+    <audio id="correct-sound" src="./bakachin-material/audio/correctAnswer.mp3"></audio>
+    <audio id="wrong-sound" src="./bakachin-material/audio/bakachin.m4a"></audio>
+    <audio id="click-sound" src="./bakachin-material/audio/bttn-click.mp3"></audio>
+
+    <!-- JavaScript読込 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
